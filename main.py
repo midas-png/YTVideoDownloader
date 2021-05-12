@@ -1,6 +1,6 @@
 import pafy
 
-url = input('Введите URL для скачивания:\n')
+url = input('Enter URL to download:\n')
 
 def download(url):
     try:
@@ -14,12 +14,12 @@ def download(url):
             print(f'{count}. {steam}')
             count+=1
 
-        count_steam = int(input('Введите номер:\n'))
+        count_steam = int(input('Enter a number:\n'))
         downld = steams[count_steam - 1].download() 
 
-        print(f'Видео "{paf.title}" успешно скачено')
+        print(f'Video "{paf.title}" has been successfully downloaded')
 
     except Exception as e:
-        print(f'Ошибка\n{e}')
+        print(f'Error\n{e}')
 
 download(url)
